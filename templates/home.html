@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Online Voting System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('{{ url_for('static', filename='inp1.gif') }}');
+            background-size: cover;
+            text-align: center;
+            color: white;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: bold;
+            font-style: italic;
+            margin-top: 50px;
+        }
+        .btn {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .signup-btn {
+            background-color: #28a745; /* Green */
+            color: white;
+        }
+        .login-btn {
+            background-color: #007bff; /* Blue */
+            color: white;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <h2>⭐ <i><b> Smart Voting System Using Face Recognition Technology and AI-Driven Database Management for Secure Elections</b></i> 🗳️</h2>
+    <a href="{{ url_for('signup') }}" class="btn signup-btn">✍️ Sign Up</a>
+    <a href="{{ url_for('login') }}" class="btn login-btn">🔐 Login</a>
+</body>
+</html>

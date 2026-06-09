@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="card theory-card">
+  <h2>👓 Object Detection Systems for Visually Impaired Individuals</h2>
+
+  <p>
+    🌟 <strong>Object detection systems for visually impaired people</strong> combine camera vision,
+    artificial intelligence, and real-time audio feedback to help users understand their surroundings.
+    Using advanced deep learning models such as YOLO, MobileNet, or EfficientDet, the system scans the
+    environment, recognizes objects, and narrates them through speech output. This allows visually impaired
+    individuals to walk safely, detect obstacles, and interact with their environment more independently.
+  </p>
+
+  <p>
+    ⚙️ These systems typically rely on a small wearable camera (in glasses or a pocket device),
+    where frames are processed on-device or sent to an edge computer. The AI model then identifies multiple
+    objects, classifies them, and determines their positions. The system may also estimate distances and motion
+    patterns—for example, identifying whether an object is approaching or stationary—helping users make
+    better decisions while moving.
+  </p>
+
+  <p>
+    🔊 Communication to the user happens through <strong>audio feedback, haptic vibration patterns,
+    or spatial sound cues</strong>. Speech synthesis reads out detected objects ("Person on your left",
+    "Chair ahead", or "Car approaching"). To avoid overwhelming the user, advanced systems filter repeated
+    labels, prioritize dangerous or important objects, and adjust speech frequency depending on user speed
+    and context.
+  </p>
+
+  <p>
+    🚧 Despite their benefits, these systems face challenges such as incorrect predictions, latency,
+    low-light performance issues, and privacy concerns because they continuously capture the environment.
+    Researchers are working on improving accuracy, reducing hardware cost, and adding features such as
+    scene understanding, OCR text reading, indoor navigation, gesture detection, and emergency alerting,
+    making the technology even more powerful and user-friendly for visually impaired individuals.
+  </p>
+
+  <div style="margin-top:20px;">
+    <a class="btn" href="{{ url_for('index') }}">🏠 Return to Home Page</a>
+  </div>
+</div>
+
+
+<style>
+  body {
+    background: url('{{ url_for("static", filename="about.gif") }}') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #fefae0;
+    padding: 40px;
+  }
+
+  .theory-card {
+    background: rgba(0,0,0,0.72);
+    padding: 28px;
+    border-radius: 16px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+  }
+
+  .theory-card h2 {
+    font-size: 1.85rem;
+    text-align: center;
+    color: #ffe8a3;
+    margin-bottom: 20px;
+    text-shadow: 0 0 12px #ffecb3;
+  }
+
+  .theory-card p {
+    line-height: 1.75;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    color: #fdf6e4;
+    text-shadow: 0 0 8px rgba(255,255,255,0.2);
+  }
+
+  .btn {
+    background: linear-gradient(90deg, #1d4ed8, #1e40af);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: .3s;
+    display: inline-block;
+    box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  }
+
+  .btn:hover {
+    transform: scale(1.08);
+    background: linear-gradient(90deg, #1e40af, #1d4ed8);
+    box-shadow: 0 0 18px rgba(255,255,255,0.4);
+  }
+</style>
+
+{% endblock %}
